@@ -23,15 +23,16 @@ def je_prvocislo(cislo):
     cislo = int(cislo)
     if cislo <= 1:
         return False
-    i = 0
-    #for delitel in range(2, round(cislo**0.5)):
-    for delitel in range(2, cislo):
-        time.sleep(0.001)
-        if cislo % delitel == 0:
-            print(f'Iterace {i}')
+    if cislo <= 3:
+        return True
+    if cislo % 2 == 0 or cislo % 3 == 0:
+        return False
+    
+    i = 5
+    while i * i <= cislo:
+        if cislo % i == 0 or cislo % (i + 2) == 0:
             return False
-        i += 1
-    print('Iterace: {i}')
+        i += 6
     return True
 
 def vrat_prvocisla(maximum):
@@ -49,5 +50,7 @@ if __name__ == "__main__":
     cislo = input("Zadej maximum: ")
     # 999983
     print(je_prvocislo(cislo))
+    prvocisla = vrat_prvocisla(cislo)
+    print(f"Prvočísla menší než {cislo}: {prvocisla}")
     # prvocisla = vrat_prvocisla(cislo)
     # print(prvocisla)
