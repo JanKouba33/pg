@@ -43,10 +43,9 @@ def spoj_data(data1, data2):
 
 
 def zapis_csv(soubor, data):
-    data = []
     with open(soubor,"w") as fp:
         writer = csv.writer(fp)
-        writer.writerows (data)
+        writer.writerows(data)
     
 
 
