@@ -2,10 +2,12 @@ import sys
 import csv
 
 def nacti_csv(soubor):
-    with open(soubor, "r") as soubor1:
-        reader = csv.reader(soubor1)
+    data = []
+    with open(soubor, "r") as soubor:
+        reader = csv.reader(soubor)
         for radek in reader:
-            print(radek)
+            data.append (radek)
+    return data
     
 
     
@@ -41,7 +43,12 @@ def spoj_data(data1, data2):
 
 
 def zapis_csv(soubor, data):
-    pass
+    data = []
+    with open(soubor,"w") as fp:
+        writer = csv.writer(fp)
+        writer.writerows (data)
+    
+
 
 
 if __name__ == "__main__":
