@@ -2,12 +2,21 @@ import sys
 import csv
 
 def nacti_csv(soubor):
-    pass
+    with open(soubor, "r") as soubor1:
+        reader = csv.reader(soubor1)
+        for radek in reader:
+            print(radek)
+    
+
+    
 
 
 def spoj_data(data1, data2):
     if not data1 or not data2:
         return data1 if data1 else data2
+
+            
+
 
     # Získání hlaviček a dat z obou souborů
     headers1, *rows1 = data1
