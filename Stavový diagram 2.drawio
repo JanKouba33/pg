@@ -1,9 +1,122 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0" version="24.9.2">
   <diagram name="Stránka-1" id="vA2wckz-wIXNtxfnHtkk">
-    <mxGraphModel>
+    <mxGraphModel dx="1213" dy="1937" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="BY7HNwdbHU4oL1801LAm-1" value="Kontaktování hráče" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="260" y="110" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="BY7HNwdbHU4oL1801LAm-3" value="Stavba fotbalového týmu" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=25;" parent="1" vertex="1">
+          <mxGeometry x="370" y="20" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BY7HNwdbHU4oL1801LAm-7" value="Jednání s hráčem" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="110" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="BY7HNwdbHU4oL1801LAm-8" value="Hráč se rohoduje" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="BY7HNwdbHU4oL1801LAm-1" target="BY7HNwdbHU4oL1801LAm-7" edge="1">
+          <mxGeometry y="4" width="80" relative="1" as="geometry">
+            <mxPoint x="300" y="144.5" as="sourcePoint" />
+            <mxPoint x="380" y="144.5" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BY7HNwdbHU4oL1801LAm-9" value="Hráč nemá zájem" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="BY7HNwdbHU4oL1801LAm-7" target="BY7HNwdbHU4oL1801LAm-10" edge="1">
+          <mxGeometry x="-0.0423" width="80" relative="1" as="geometry">
+            <mxPoint x="420" y="230" as="sourcePoint" />
+            <mxPoint x="70" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="590" y="280" />
+              <mxPoint x="80" y="280" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BY7HNwdbHU4oL1801LAm-10" value="Hledání hráče" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="10" y="110" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="BY7HNwdbHU4oL1801LAm-11" value="Hráč je nalezen" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="BY7HNwdbHU4oL1801LAm-1" edge="1">
+          <mxGeometry y="4" width="80" relative="1" as="geometry">
+            <mxPoint x="150" y="144.5" as="sourcePoint" />
+            <mxPoint x="270" y="144.5" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BY7HNwdbHU4oL1801LAm-14" value="Hráč má zajem" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.34;entryY=0.038;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="BY7HNwdbHU4oL1801LAm-15" edge="1">
+          <mxGeometry y="4" width="80" relative="1" as="geometry">
+            <mxPoint x="660" y="144.5" as="sourcePoint" />
+            <mxPoint x="720" y="145" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="720" y="145" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BY7HNwdbHU4oL1801LAm-15" value="Rozhodování klubu" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="670" y="280" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="BY7HNwdbHU4oL1801LAm-16" value="Klub nemá zájem" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.293;entryY=0.929;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="BY7HNwdbHU4oL1801LAm-15" target="BY7HNwdbHU4oL1801LAm-10" edge="1">
+          <mxGeometry x="-0.0423" width="80" relative="1" as="geometry">
+            <mxPoint x="610" y="265" as="sourcePoint" />
+            <mxPoint x="100" y="265" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="130" y="320" />
+              <mxPoint x="51" y="320" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BY7HNwdbHU4oL1801LAm-17" value="Klub má zájem" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="BY7HNwdbHU4oL1801LAm-15" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="680" y="420" as="sourcePoint" />
+            <mxPoint x="740" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BY7HNwdbHU4oL1801LAm-18" value="Dokončení přestupu" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="670" y="450" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="BY7HNwdbHU4oL1801LAm-19" value="" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.05;entryY=0.757;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="BY7HNwdbHU4oL1801LAm-10" edge="1">
+          <mxGeometry x="-0.0423" width="80" relative="1" as="geometry">
+            <mxPoint x="670" y="490" as="sourcePoint" />
+            <mxPoint x="51" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="130" y="495" />
+              <mxPoint x="20" y="495" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BY7HNwdbHU4oL1801LAm-20" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
+          <mxGeometry x="40" y="20" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BY7HNwdbHU4oL1801LAm-21" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" parent="1" source="BY7HNwdbHU4oL1801LAm-20" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="55" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BY7HNwdbHU4oL1801LAm-22" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
+          <mxGeometry x="160" y="20" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BY7HNwdbHU4oL1801LAm-23" value="Tým má všechny hráče" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="BY7HNwdbHU4oL1801LAm-22" edge="1">
+          <mxGeometry x="1" y="-35" width="80" relative="1" as="geometry">
+            <mxPoint x="90" y="109" as="sourcePoint" />
+            <mxPoint x="170" y="109" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="90" y="35" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bnAF8IfCeO9Hkcr0dvcv-1" value="Komplikace v jednání" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=0.774;exitY=0.038;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="BY7HNwdbHU4oL1801LAm-15">
+          <mxGeometry x="0.176" y="-20" width="80" relative="1" as="geometry">
+            <mxPoint x="550" y="-28.5" as="sourcePoint" />
+            <mxPoint x="610" y="110" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="780" y="90" />
+              <mxPoint x="610" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
