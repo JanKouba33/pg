@@ -7,7 +7,7 @@ gif_header2 = b'GIF89a'
 png_header = b'\x89PNG\r\n\x1a\n'
 
 
-def read_header(file_name, header_length):
+def read_header(soubor, 2):
     """
     Tato funkce načte binární soubor z cesty file_name,
     z něj přečte prvních header_length bytů a ty vrátí pomocí return
