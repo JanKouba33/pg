@@ -30,6 +30,6 @@ def cislo_text(cislo):
 
 
 if __name__ == "__main__":
-    cislo = input("Zadej číslo: ")
+    cislo = input("Zadej číslo:")
     text = cislo_text(int(cislo))
-    print(f"Zadané číslo je: {text}")
+    print(f"Zadané číslo je:{text}")
