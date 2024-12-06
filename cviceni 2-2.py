@@ -1,24 +1,48 @@
-def levensteinova_vzdalenost(dotaz1, dotaz2):
-   
-   i = 0
-   lenght = min(len(dotaz1), len(dotaz2))
-   levenstein = 0
-   while i < lenght:
-       if dotaz1[i] != dotaz2
+
     
-        
-    
+def dec_to_bin2(cislo):
+    # funkce prevede cislo na binarni reprezentaci (cislo muze byt str i int!!!)
+    # 7 -> "111"
+    # 5 -> "101"
+    cislo = int(cislo)
+    if cislo == 0:
+        return "0"
+    pow = 0
+    i = 0
+    while True:
+        m = 2 ** i
+        if m > cislo:
+            pow = i - 1
+            break
+    vysledek = ""
+    for i in range(pow, -1, -1):
+        m = 2 ** i
+        if m <= cislo:
+            vysledek += "1"
+            cislo -= m
+        else:
+            vysledek += "0"
+    return vysledek
+
+
+def dec_to_bin(cislo):
+    cislo = int(cislo)
+    if cislo == 0:
+        return "0"
+    elif cislo == 1:
+        return "1"
+    else:
+        return dec_to_bin(cislo // 2) + str(cislo % 2)
+
+
+def test_bin_to_dec():
+    assert dec_to_bin("0") == "0"
+    assert dec_to_bin(1) == "1"
+    assert dec_to_bin("100") == "1100100"
+    assert dec_to_bin(101) == "1100101"
+    assert dec_to_bin(127) == "1111111"
+    assert dec_to_bin("128") == "10000000"
 
 
 if __name__ == "__main__":
-
-    query1 = "seznam"
-    query2 = "seznamka"
-    query3 = "sesnam"
-    query4 = "seznam"
-
-    print(levensteinova_vzdalenost_for(query1, query2))
-    print(levensteinova_vzdalenost_for(query2, query3))
-    print(levensteinova_vzdalenost_for(query1, query3))
-
-    print(levensteinova_vzdalenost_for(query1, query4))
+    dec_to_bin(120)
