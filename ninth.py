@@ -2,21 +2,20 @@ def dec_to_bin(cislo):
     # funkce prevede cislo na binarni reprezentaci (cislo muze byt str i int!!!)
     # 7 -> "111"
     # 5 -> "101"
-    cislo = int(cislo)
-    if cislo == 0:
-        return "0"
-    vysledek= ""    
-    while cislo > 0:
-        if cislo % 2 == 0:
-            vysledek = "0" + vysledek
-        else:
-            vysledek = "1" + vysledek
-        cislo = cislo // 2
 
+    vysledek = ""
+    number = int(cislo)
 
+    if number  == 0:
+        return vysledek + "0"
 
+    while number > 0:
+        vysledek = str(number % 2) + vysledek
+        number = number // 2
+            
 
     return vysledek
+
 
 def test_bin_to_dec():
     assert dec_to_bin("0") == "0"
@@ -27,5 +26,4 @@ def test_bin_to_dec():
     assert dec_to_bin("128") == "10000000"
 
 
-if __name__ == "__main__":
-    dec_to_bin(120)
+test_bin_to_dec()
