@@ -1,35 +1,66 @@
-class Osoba:
-    def __init__(self, jmeno, vek) -> None:
-        self.jmeno = jmeno
-        self.vek = vek
+# Příklad 2: Práce s externími knihovnami a soubory
+# Zadání:
+# Napište funkci `fetch_and_save_data`, která:
+# 1. Načte data z URL (https://jsonplaceholder.typicode.com/posts).
+# 2. Do staženého json souboru přidá klíč `userName` s hodnotou jména uživatele podle klíče `userId` z URL (např. 1 -> "Leanne Graham").
+# 3. Data uloží do souboru `data.json` ve formátu JSON.
+# Použijte knihovny `requests` a `json`.
 
-    def __str__(self) -> str:
-        return f"Osoba(jmeno={self.jmeno}, vek={self.vek})"
+import requests
+import json
+
+url = "https://jsonplaceholder.typicode.com/posts"
+user_names = {
+    1: "Leanne Graham",
+    2: "Ervin Howell",
+    3: "Clementine Bauch",
+    4: "Patricia Lebsack",
+    5: "Chelsey Dietrich",
+    6: "Mrs. Dennis Schulist",
+    7: "Kurtis Weissnat",
+    8: "Nicholas Runolfsdottir V",
+    9: "Glenna Reichert",
+    10: "Clementina DuBuque"
+}
+
+def fetch_and_save_data():
+    response = requests.get(url)
+    if not response.ok:
+        return False
+        
+    posts = response.json()
+
+        
+    for post in posts:
+        user_id = post.get("userId")
+        if user_id in use_name:
+            post["userName"] = user_name[user_Id]
+
+        
+    with open("data.json", "w") as file:
+        json.dump(posts, file)
+
+    return True
 
 
-class Student(Osoba):
-    def __init__(self, jmeno, vek, rocnik) -> None:
-        super().__init__(jmeno, vek)
-        self.rocnik = rocnik
-    
-    def __str__(self) -> str:
-        return f"Student {self.jmeno} studuje {self.rocnik} rocnik"
+# Pytest testy pro Příklad 2
+from unittest.mock import patch, MagicMock, mock_open
 
+def test_fetch_and_save_data():
+    mock_data = [
+        {"userId": 1, "id": 1, "title": "Test post", "body": "This is a test."}
+    ]
+    with patch("requests.get") as mock_get:
+        mock_get.return_value = MagicMock(ok=True, status_code=200, json=MagicMock(return_value=mock_data), text=json.dumps(mock_data), content=json.dumps(mock_data))
 
-class Ucitel(Osoba):
-    def __init__(self, jmeno, vek, obor) -> None:
-        super().__init__(jmeno, vek)
-        self.obor = obor
-    
-    def __str__(self) -> str:
-        return f"Ucitel {self.jmeno} uci obor {self.obor}"
-
-
-if __name__ == "__main__":
-    student1 = Student("Adam", 20, 2)
-    student2 = Student("Eva", 19, 1)
-    ucitel = Ucitel("Tomas", 40, "IT")
-
-    print(student1)
-    print(student2)
-    print(ucitel)
+        with patch("builtins.open", mock_open()) as mock_file:
+            assert fetch_and_save_data() == True
+            mock_file().write.call_args[0][0] == json.dumps([
+                {
+                    "userId": 1,
+                    "id": 1,
+                    "title": "Test post",
+                    "body": "This is a test.",
+                    "userName": "Leanne Graham"
+                }
+            ])

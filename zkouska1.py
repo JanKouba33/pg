@@ -1,20 +1,25 @@
-def operace(typ, a, b):
-    matematicka_operace = None
-    if typ == "+":
-        matematicka_operace = a + b
-    elif typ == "-":
-        matematicka_operace = a - b
-    elif typ == "*":
-        matematicka_operace = a * b
-    elif typ == "/":
-        matematicka_operace = a / b
-    else:
-        return ("Není možné vypsat")
-    return matematicka_operace
+# Příklad 1: Práce s podmínkami a cykly
+# Zadání:
+# Napište funkci `process_numbers`, která přijme seznam celých čísel. 
+# Funkce vrátí nový seznam, který obsahuje pouze čísla větší než 5, vynásobená 2.
+# Pokud seznam obsahuje číslo 10, ukončete zpracování seznamu a vraťte dosud vytvořený seznam.
 
-if __name__ == "__main__":
-    print(operace("+", 1, 2))  # 3
-    print(operace("-", 2, 1))  # 1
-    print(operace("*", 0, 5))  # 0
-    print(operace("/", 4, 2))
-    print(operace("A", 4, 2))  # 2
+def process_numbers(numbers):
+    mnozina = []
+    
+    for cislo in numbers:
+        if cislo == 10:
+            break
+        if cislo > 5:
+            mnozina.append(cislo * 2)
+    return mnozina
+
+
+
+
+# Pytest testy pro Příklad 1
+def test_process_numbers():
+    assert process_numbers([1, 6, 3, 10, 8]) == [12]
+    assert process_numbers([7, 8, 10, 12]) == [14, 16]
+    assert process_numbers([1, 2, 3, 4]) == []
+    assert process_numbers([5, 6, 7, 15]) == [12, 14, 30]
