@@ -34,7 +34,7 @@ def fetch_and_save_data():
     for post in posts:
         user_id = post.get("userId")
         if user_id in user_name:
-            post["userName"] = user_name[user_Id]
+            post["userName"] = user_name[user_id]
 
         
     with open("data.json", "w") as file:
