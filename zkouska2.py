@@ -28,17 +28,17 @@ def fetch_and_save_data():
     if not response.ok:
         return False
         
-    posts = response.json()
+    seznam = response.json()
 
         
-    for post in posts:
-        user_id = post.get("userId")
+    for prvek in seznam:
+        user_id = prvek.get("userId")
         if user_id in user_names:
-            post["userName"] = user_names[user_id]
+            prvek["userName"] = user_names[user_id]
 
         
     with open("data.json", "w") as file:
-        json.dump(posts, file)
+        json.dump(seznam, file)
 
     return True
 
