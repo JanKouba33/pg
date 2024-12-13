@@ -25,7 +25,7 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        return 3.14 * self.radius * self.radius  
+        return self.radius * self.radius * 3.14
 
 from unittest.mock import patch, MagicMock, mock_open
 
